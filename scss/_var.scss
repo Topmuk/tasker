@@ -1,0 +1,14 @@
+$white : #fff;
+$main: #3dc0f9;
+
+@font-face {
+  font-family: OpenSans;
+  src: url(../fonts/OpenSans-Light.ttf);
+}
+
+body{
+  background: #f1f1f1;
+  font-family: OpenSans;
+  display: flex;
+  flex-wrap: wrap;
+}

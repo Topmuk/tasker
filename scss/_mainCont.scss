@@ -1,0 +1,22 @@
+.main-cont{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex: 1;
+
+  display: table;
+  width: calc(100% - 300px);
+  height: 100vh;
+
+  .main-intro{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 30px;
+    opacity: 0.2;
+    span{
+      font-size: 50px;
+    }
+  }
+}

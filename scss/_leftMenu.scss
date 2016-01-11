@@ -1,0 +1,125 @@
+.left-menu{
+  background: #fff;
+  width: 300px;
+  height: 100vh;
+  box-shadow: 3px 0 5px rgba(0, 0, 0, .1);
+
+  .left-menu-add{
+
+    margin: 0 auto;
+    cursor: pointer;
+    // border: 1px solid #000;
+    color: $main;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+      width: 80%;
+      max-width: 80px;
+      max-height: 80px;
+    }
+
+    p{
+      margin-left: 20px;
+      padding-top: 5px;
+      font-size: 20px;
+    }
+  }
+
+  .task-container{
+    // background: #dedede;
+    margin-top: 50px;
+
+    .task{
+      background: $white;
+      height: 50px;
+      line-height: 50px;
+      font-size: 18px;
+      padding: 0 20px;
+      padding-right: 0;
+      border-bottom: 1px solid rgba(0, 0, 0, .2);
+      transition: 0.3s ease;
+      position: relative;
+      overflow: hidden;
+
+      display: flex;
+      justify-content: space-between;
+
+      &:hover{
+        // background: #f6f6f6;
+        border-bottom: 1px solid $main;
+        color: $main;
+
+        img{
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      &.active{
+        padding-left: 40px;
+        background: $main;
+        color: $white;
+      }
+
+      &.completed{
+        background: #fff;
+        color: #c7c7c7;
+        border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+        .line-throught{
+          width: 90%;
+        }
+
+        .task-complete{
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+
+      p{
+        padding: 0;
+        margin: 0;
+        line-height: 50px;
+        width: 100%;
+        cursor: pointer;
+      }
+
+      .task-settings{
+        width: 170px !important;
+      }
+
+
+      img{
+        width: 30px;
+        height: 30px;
+        opacity: 0;
+        padding: 10px;
+        transition: 0.3s ease;
+        transform: translateX(100px);
+        cursor: pointer;
+      }
+
+      .task-remove{
+        transition-delay: 0.1s;
+      }
+
+      .line-throught{
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        height: 1px;
+        width: 0;
+        background: #c7c7c7;
+        transition: 0.5s ease;
+        pointer-events: none;
+      }
+    }
+
+    .sortable-ghost{
+      background: rgba(0, 0, 0, .1);
+    }
+  }
+}

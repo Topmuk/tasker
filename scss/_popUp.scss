@@ -1,0 +1,31 @@
+.pop-up{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background: rgba(255, 255, 255, .9);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+
+  display: none;
+  
+  input{
+    display: block;
+    min-height: 60px;
+    line-height: normal;
+    width: 50%;
+    max-width: none;
+    min-width: 320px;
+    border: none;
+    border-bottom: 1px solid $main;
+    font-size: 35px;
+    font-weight: 100;
+    padding: 0 10px;
+    text-align: center;
+    outline: none;
+  }
+
+}
