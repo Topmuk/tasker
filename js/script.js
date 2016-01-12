@@ -110,6 +110,9 @@ function activateTask() {
 function completeTask(){
   var mainParent = this.parentElement.parentElement
   mainParent.className = 'task completed'
+
+  mainParent.getElementsByTagName('img')[0].src = 'img/complete.svg'
+  mainParent.getElementsByTagName('img')[1].src = 'img/close.svg'
 }
 
 
@@ -150,18 +153,18 @@ function toggleFields(val){
 
 function removeAnimation(item){
   item.style.transition = 'none'
-  item.style.margin = '0 auto'
+  // item.style.margin = '0 auto'
 
 
   TweenMax.fromTo(item, .5, {
     width: '100%'
   },
   {
-    width: 0, opacity: 0
+    width: 0, opacity: 1, padding: 0
   })
 
   var anim2 = TweenMax.to(item, .5, {
-    height: 0
+    height: 0, opacity: 0
   })
 
   anim2.delay(.5)
