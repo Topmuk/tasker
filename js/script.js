@@ -6,7 +6,6 @@ var task      = document.querySelectorAll('.task p')
 
 
 function init(){
-  console.log('initialize');
 
   // Create event listener on all tasks
   for (var i = 0; i < task.length; i++) {
@@ -89,8 +88,6 @@ function createTask(){
 
     } else if (e.keyCode == 27){
       toggleFields(0)
-    }else {
-      console.log(e.keyCode);
     }
   }
 }
@@ -103,23 +100,26 @@ function activateTask() {
 
   }
   this.parentElement.className = this.parentElement.className + ' active'
+  this.parentElement.getElementsByTagName('img')[0].src = 'img/complete_white.svg'
+  this.parentElement.getElementsByTagName('img')[1].src = 'img/close_white.svg'
 
 }
+
 
 
 function completeTask(){
   var mainParent = this.parentElement.parentElement
   mainParent.className = 'task completed'
-  console.log(mainParent);
 }
+
 
 function removeTask(){
   var mainParent = this.parentElement.parentElement
   removeAnimation(mainParent)
 }
 
+
 function toggleFields(val){
-  console.log('toggleFields :: ' + val);
 
   if (val == 1) {
     TweenMax.fromTo(
@@ -146,6 +146,7 @@ function toggleFields(val){
   }
 
 }
+
 
 function removeAnimation(item){
   item.style.transition = 'none'
