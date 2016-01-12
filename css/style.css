@@ -84,12 +84,12 @@ body { background: #f1f1f1; font-family: OpenSans; display: -webkit-box; display
 .pop-up { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; position: fixed; background: rgba(255, 255, 255, 0.9); top: 0; left: 0; width: 100vw; height: 100vh; z-index: 1000; display: none; }
 .pop-up input { display: block; min-height: 60px; line-height: normal; width: 50%; max-width: none; min-width: 320px; border: none; border-bottom: 1px solid #3dc0f9; font-size: 35px; font-weight: 100; padding: 0 10px; text-align: center; outline: none; }
 
-.left-menu { background: #fff; width: 300px; height: 100vh; box-shadow: 3px 0 5px rgba(0, 0, 0, 0.1); }
+.left-menu { background: #fff; width: 300px; height: 100vh; box-shadow: 3px 0 5px rgba(0, 0, 0, 0.1); overflow-x: hidden; }
 .left-menu .left-menu-add { margin: 0 auto; cursor: pointer; color: #3dc0f9; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
 .left-menu .left-menu-add img { width: 80%; max-width: 80px; max-height: 80px; }
 .left-menu .left-menu-add p { margin-left: 20px; padding-top: 5px; font-size: 20px; }
 .left-menu .task-container { margin-top: 50px; }
-.left-menu .task-container .task { background: #fff; height: 50px; line-height: 50px; font-size: 18px; padding: 0 20px; padding-right: 0; border-bottom: 1px solid rgba(0, 0, 0, 0.2); -webkit-transition: 0.3s ease; transition: 0.3s ease; position: relative; overflow: hidden; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; }
+.left-menu .task-container .task { background: #fff; height: 50px; line-height: 50px; font-size: 18px; padding: 0 20px; padding-right: 0; border-bottom: 1px solid rgba(0, 0, 0, 0.2); -webkit-transition: 0.3s ease; transition: 0.3s ease; position: relative; overflow: hidden; box-sizing: border-box; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; }
 .left-menu .task-container .task:hover { border-bottom: 1px solid #3dc0f9; color: #3dc0f9; }
 .left-menu .task-container .task:hover img { opacity: 1; -webkit-transform: translateX(0); -ms-transform: translateX(0); transform: translateX(0); }
 .left-menu .task-container .task.active { padding-left: 40px; background: #3dc0f9; color: #fff; }
